@@ -30,9 +30,15 @@ async def get_task(task_id:str):
     return task
 
 
-async def update_task():
-    pass
-
+async def update_task(task):
+    task_dict = dict(task)
+    task_dict.pop("id",None)
+    
+    try:
+        result = db_client.local.todo_list.find_one_and_replace({"_id":ObjectId(task.id)},task_dict)
+        return await search_task("_id",ObjectId(task.id))
+    except:
+        return None
 
 async def delete_task():
     pass

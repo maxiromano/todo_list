@@ -2,7 +2,7 @@
 
 from fastapi import APIRouter, HTTPException
 from models.task import TaskBase
-from crud.task import create_task, get_all_task, get_task
+from crud.task import create_task, get_all_task, get_task, update_task
 
 router = APIRouter()
 
@@ -19,3 +19,8 @@ async def list_all_tasks():
 async def search_task(id:str):
     task = await get_task(id)
     return task
+
+@router.put("/tasks/")
+async def replace_task(task:TaskBase):
+    result = await update_task(task)
+    return result
