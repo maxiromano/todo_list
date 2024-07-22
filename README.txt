@@ -6,10 +6,6 @@
 
 #### Python and Virtual Environment
 
-The instructions below assume you have [pyenv](https://github.com/pyenv/pyenv) installed.
-If you don't, use any other method to create a virtual environment
-and install Python 3.11.4.
-
 - Install Python 3.11.4
 
 - Create a virtual environment
