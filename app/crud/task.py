@@ -40,5 +40,8 @@ async def update_task(task):
     except:
         return None
 
-async def delete_task():
-    pass
+async def delete_task(task_id:str):
+    if search_task("_id",ObjectId(task_id)):
+        result = db_client.local.todo_list.find_one_and_delete({"_id":ObjectId(task_id)})
+    else:
+        return {"error":"No se ha eliminado"}
