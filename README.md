@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto es una API para una aplicación de lista de tareas (to-do list) que permite la gestión de tareas y usuarios. La API incluye autenticación básica para los usuarios, así como operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para las tareas. También permite filtrar las tareas por estado y obtener detalles específicos de cada tarea.
+Este proyecto es una API para una aplicación de lista de tareas (to-do list) que permite la gestión de tareas y usuarios. La API incluye autenticación básica para los usuarios, así como operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para las tareas.
 
 ## Características
 
